@@ -3,10 +3,13 @@ EN:
 
 ## I'm incredibly lazy, in fact, I wrote the entire code without AI (believe it or not, although almost everyone does it nowadays) or anything, but I'm terrible at explaining things and I don't want to spend hours writing documentation, so I used GitHub's Copilot to do it for me.
 
+_(Also, here are some code snippets about the code. I have a huge habit of OVERUSING the comma operator in C; I've never had problems before, but maybe you will. And there are also a lot of unnecessary comments sometimes, which is my own thing.)_
+
 PT-BR:
 
 ## Eu sou preguiçoso pra caralho, de fato, fiz o código inteiro sem IA(acredite em mim ou não, apesar que quase todo mundo faz hoje em dia) nem nada, mas sou péssimo em explicar as coisas e não quero ficar passando horas escrevendo docs, então usei o Copilot do github pra fazer isso por mim.
 
+_(Alias, aqui alguns códigos sobre o código, eu tenho o costume/hábito enorme de ABUSAR do operador de virgula em C, nunca tive problemas antes mas talvez vocês tenham. E também tem muito comentário desnecessário as vezes, coisa minha propria.)_
 
 ### _(A seguir, palavras da IA / Next, words from AI.)_
 
