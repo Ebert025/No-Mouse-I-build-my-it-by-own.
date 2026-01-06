@@ -8,6 +8,9 @@ PT-BR:
 ## Eu sou preguiçoso pra caralho, de fato, fiz o código inteiro sem IA(acredite em mim ou não, apesar que quase todo mundo faz hoje em dia) nem nada, mas sou péssimo em explicar as coisas e não quero ficar passando horas escrevendo docs, então usei o Copilot do github pra fazer isso por mim.
 
 
+_### (A seguir, palavras da IA / Next, words from AI.)_
+
+
 
 # No-Mouse — Control your mouse with the Numpad / Controle o mouse com o Numpad
 
