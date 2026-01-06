@@ -216,7 +216,7 @@ void keyboardinput(struct libinput_event* event) {
     
 
     
-    
+    // Nota denovo dps de eu ter criado esse repositorio: Serio, quem nn sabe como o operador de ',' funciona em C vai surta ao vez isso LOL
     if (key==KEY_KP8&&action[MOUSE_SPECIAL]) printf("[Keyboard2Mouse] Scroll-up\n"),action[MOUSE_SCROLL_UP]=true,dev_sendscroll(configs[CONF_WHELL], true);
     else if (key==KEY_KP2&&action[MOUSE_SPECIAL]) printf("[Keyboard2Mouse] Scroll-down\n"),action[MOUSE_SCROLL_DOWN]=true,dev_sendscroll(-configs[CONF_WHELL], true);
     else if (key==KEY_KP4&&action[MOUSE_SPECIAL]) printf("[Keyboard2Mouse] Scroll-left\n"),action[MOUSE_SCROLL_LEFT]=true,dev_sendscroll(-configs[CONF_WHELL], false);
@@ -228,7 +228,9 @@ void keyboardinput(struct libinput_event* event) {
     else if (key==KEY_KP6) printf("[Keyboard2Mouse] Direita\n"),action[MOUSE_RIGHT]=true;
     else if (key==KEY_KP7) printf("[Keyboard2Mouse] Click-Esquerdo\n"),action[MOUSE_BUTTON_LEFT]=true;
     else if (key==KEY_KP9) printf("[Keyboard2Mouse] Click-Direito\n"),action[MOUSE_BUTTON_RIGHT]=true;
-    
+
+    // Depois eu podia criar #if #elses pra remover esse tanto de printf, o app tem uma leve latencia culpa deles, tenho ctz.
+    // Ate pq hj em dia é mais rápido mandar pacote UDP pra europa ou australia do q printar algo na tela. 
     else if (key==KEY_NUMLOCK&&action[MOUSE_SPECIAL]) configs[CONF_NUMPADCONSUME] ? unconsume_numpad() : consume_numpad(),configs[CONF_NUMPADCONSUME]=!configs[CONF_NUMPADCONSUME], printf("[Keyboard2Mouse] NumpadConsume = %ld\n",configs[CONF_NUMPADCONSUME]);
     else if (key==KEY_KP1&&action[MOUSE_SPECIAL]) configs[CONF_DELAY_IN_MICROSECONDS]+=100,printf("[Keyboard2Mouse] [+] delay microseconds = %ld\n",configs[CONF_DELAY_IN_MICROSECONDS]);
     else if (key==KEY_KP3&&action[MOUSE_SPECIAL]&&configs[CONF_DELAY_IN_MICROSECONDS]>100) configs[CONF_DELAY_IN_MICROSECONDS]-=100,printf("[Keyboard2Mouse] [-] delay microseconds = %ld\n",configs[CONF_DELAY_IN_MICROSECONDS]);
@@ -271,6 +273,8 @@ void reconfig() {
     scanf("%ld %ld %ld",&configs[CONF_SENSIBILITY],&configs[CONF_DELAY_IN_MICROSECONDS],&configs[CONF_WHELL]);
 }
 
+// nota minha do futuro no momento que criei esse repositorio, agora eu percebo o quanto URGENTE esse código precisa de refatoração
+// apesar que quando escrevi ele oque eu basicamente fiz foi um monte de CTRL-C e CTRL-V, mas sério, algumas macros aq iriam SALVAR E MUITO
 void consume_numpad() {
     /* Bem improvavel algum app tá usando e se tiver nn tem muito problema */
     XGrabKey(monitor, XKeysymToKeycode(monitor, XK_KP_0), AnyModifier, root, True, GrabModeAsync,GrabModeAsync);
