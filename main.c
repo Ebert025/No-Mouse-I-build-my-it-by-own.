@@ -47,11 +47,6 @@ static long configs[_CONF_LAST_ITEM] = {};
 static bool running=true;
 static Display* monitor;
 static Window root;
-static int charkeys[3][10] = {
-    {XK_Z,XK_X,XK_C,XK_V,XK_B,XK_N,XK_M,0,0,0},
-    {XK_A,XK_S,XK_D,XK_F,XK_G,XK_H,XK_J,XK_K,XK_L,0},
-    {XK_Q,XK_W,XK_E,XK_R,XK_T,XK_Y,XK_U,XK_I,XK_O,XK_P}
-};
 
 
 void inputloop();
